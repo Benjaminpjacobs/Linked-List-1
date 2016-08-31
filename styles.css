@@ -1,3 +1,21 @@
+html {
+  background: url(lamp.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  margin-left: 20px;
+}
 body {
-  font-size: 200%;
+  color: white;
+  font-size: 120%;
+}
+.container, .list {
+    margin-left: 25px;
+    margin-top: 50px;
+    text-align: left;
+}
+.remove, .checkbox {
+  margin-left: 18px;
 }
