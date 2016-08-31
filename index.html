@@ -8,9 +8,9 @@
   <body>
     <section class="container">
       <section class="input">
-        <input id="title" type="text" placeholder="Bookmark Name">
-        <input id="url" type="text" placeholder="Bookmark URL">
-        <button id="create">Create Bookmark</button>
+        <input id="title" type="text" placeholder="Bookmark Name" onkeyup="enableBtn()">
+        <input id="url" type="text" placeholder="Bookmark URL" onkeyup="enableBtn()">
+        <button id="create" onClick="clearField()" disabled>Create Bookmark</button>
       </section>
       <section class="list">
         <table>
@@ -44,6 +44,10 @@
           </tr>
         </table>
 
+      </section>
+
+      <section class="counter">
+      
       </section>
 
     </section>
