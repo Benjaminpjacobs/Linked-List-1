@@ -15,8 +15,37 @@ $('#create').on('click', function() {
     <label for="checkbox_id">mark as read</label>
     <li>
   `);
+  clearField()
 });
 });
+
+
+function enableBtn() {
+  if ($('#url').val() === "" && $('#title').val() === '') {
+    return $('#create').attr('disabled', true); }
+  if ($('#url').val() !== "" && $('#bookmark-title').val() !== '') {
+    return $('#create').attr('disabled', false);}
+}
+
+  var clearField = function() {
+    $('#title').val('');
+    $('#url').val('');
+  }
+  //remove disable on create button to see error
+  $('#create').click( function() {
+    if ($('#url').val() === '' || $('#title').val() === '') {
+      alert("ERROR: Please enter Bookmark Information"); }
+    });
+
+
+  enableBtn()
+
+  //to create counter,
+  //$('.counter').html('<p>' BookmarkCounter + ' total bookmark(s). </p>');
+  //$('.counter').append('<p>'unreadCounter + 'unread bookmark(s). </p>');
+  //bookmarkCounter() { $('.bookmarkTitle').length});
+  //readcounter() { $('.read').length}
+  //unreadCounter() { ($('.bookmarkTitle').length - $('.read').length)};
 
 
 //   When the user clicks on the “Mark as Read” button:
