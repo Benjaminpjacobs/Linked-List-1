@@ -1,1 +1,5 @@
-var bookmarkTitle = $(#title)
+var bookmarkTitle = $('#cool')
+
+$(function() {
+  $('#cool').css("color","red")
+});
