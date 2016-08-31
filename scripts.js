@@ -21,9 +21,9 @@ $('#create').on('click', function() {
 
 
 function enableBtn() {
-  if ($('#url').val() === "" && $('#title').val() === "") {
+  if ($('#url').val() === "" && $('#title').val() === '') {
     return $('#create').attr('disabled', true); }
-  if ($('#url').val() !== "" && $('#bookmark-title').val() !== "") {
+  if ($('#url').val() !== "" && $('#bookmark-title').val() !== '') {
     return $('#create').attr('disabled', false);}
 }
 
