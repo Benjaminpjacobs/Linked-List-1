@@ -12,6 +12,7 @@ $('#create').on('click', function() {
     <span class='url'>${$url.val()}</span>
     <button class='remove'>Remove</button>
     <input type='checkbox' class='markAsRead'></input>
+    <label for="checkbox_id">mark as read</label>
     <li>
   `);
 });
