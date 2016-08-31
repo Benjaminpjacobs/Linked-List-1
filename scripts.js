@@ -1,6 +1,6 @@
 var $title = $('#title')
 var $url = $('#url')
-var create = $('#create')
+var $create = $('#create')
 
 
 $(function() {
@@ -17,6 +17,12 @@ $('#create').on('click', function() {
   `);
   clearField()
 });
+  $('.list').on('click', '.markAsRead', function() {
+    $(this).parent().toggleClass('.read');
+  });
+  $('.list').on('click', '.remove', function() {
+    $(this).parent().remove();
+  });
 });
 
 
@@ -37,7 +43,6 @@ function enableBtn() {
       alert("ERROR: Please enter Bookmark Information"); }
     });
 
-
   enableBtn()
 
   //to create counter,
@@ -46,16 +51,3 @@ function enableBtn() {
   //bookmarkCounter() { $('.bookmarkTitle').length});
   //readcounter() { $('.read').length}
   //unreadCounter() { ($('.bookmarkTitle').length - $('.read').length)};
-
-
-//   When the user clicks on the “Mark as Read” button:
-// A class of .read should be added to the bookmark
-// If it already has the class of .read, it should be removed
-// $('markAsRead').on('click', function() {
-//   $(this).tr().toggleClass('read');
-// });
-// // When the user clicks on the “Remove” button, the link should be removed from the page
-// $('remove').on('click', function() {
-//   var row = $(this).closest('tr');
-//   row.remove()
-// });
