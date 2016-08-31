@@ -1,10 +1,10 @@
 var $title = $('#title')
 var $url = $('#url')
 var create = $('#create')
+var $read = $('.read')
 
 
 $(function() {
-// When the user clicks on the button for creating the bookmark, it should be added to the bookmarks section
 $('#create').on('click', function() {
   $('ul').append(`
     <li>
@@ -12,18 +12,18 @@ $('#create').on('click', function() {
     <span class='url'>${$url.val()}</span>
     <button class='remove'>Remove</button>
     <input type='checkbox' class='markAsRead'></input>
-    <label for="checkbox_id">mark as read</label>
     <li>
   `);
   clearField()
+  $('#create').attr('disabled', 'disabled')
 });
 });
 
 
 function enableBtn() {
-  if ($('#url').val() === "" && $('#title').val() === '') {
+  if ($('#url').val() === "" && $('#title').val() === "") {
     return $('#create').attr('disabled', true); }
-  if ($('#url').val() !== "" && $('#bookmark-title').val() !== '') {
+  if ($('#url').val() !== "" && $('#bookmark-title').val() !== "") {
     return $('#create').attr('disabled', false);}
 }
 
@@ -31,7 +31,7 @@ function enableBtn() {
     $('#title').val('');
     $('#url').val('');
   }
-  //remove disable on create button to see error
+  //comment out enableBtn on create button to see error
   $('#create').click( function() {
     if ($('#url').val() === '' || $('#title').val() === '') {
       alert("ERROR: Please enter Bookmark Information"); }
@@ -41,11 +41,15 @@ function enableBtn() {
   enableBtn()
 
   //to create counter,
-  //$('.counter').html('<p>' BookmarkCounter + ' total bookmark(s). </p>');
-  //$('.counter').append('<p>'unreadCounter + 'unread bookmark(s). </p>');
-  //bookmarkCounter() { $('.bookmarkTitle').length});
-  //readcounter() { $('.read').length}
-  //unreadCounter() { ($('.bookmarkTitle').length - $('.read').length)};
+  $('.counter').append(bookmarkCounter() +' total bookmarks.');
+  $('.counter').append(readCounter() +' read bookmarks.');
+  $('.counter').append(unreadCounter() +' unread bookmarks.');
+
+  function bookmarkCounter() {$title.length};
+  function readCounter() {$read.length};
+  function unreadCounter() { ($title.length - $read.length)};
+
+
 
 
 //   When the user clicks on the “Mark as Read” button:
