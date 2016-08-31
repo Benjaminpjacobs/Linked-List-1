@@ -9,13 +9,58 @@ html {
 }
 body {
   color: white;
-  font-size: 120%;
+  font-family: 'Roboto Slab', serif;
+  font-size: 110%;
 }
-.container, .list {
+.container, .list, .counter {
     margin-left: 25px;
-    margin-top: 50px;
-    text-align: left;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
 }
-.remove, .checkbox {
-  margin-left: 18px;
+.container {
+  border: 1px dashed;
+}
+#title, #url {
+  background-color: #CCFFFF;
+  border-radius: 4px;
+  color: black;
+  font-size: 16px;
+  height: 40px;
+  width: 200px;
+  margin-right: 12px;
+}
+button {
+  background-color: #FFFF99;
+  height: 40px;
+  width: 150px;
+}
+button:hover {
+  cursor: pointer;
+}
+input .markAsRead {
+  width: 20px;
+}
+.list {
+  background-color: #F4F0CB;
+  color: black;
+  flex-wrap: wrap;
+  width: 50%;
+  border-radius: 10px;
+}
+h3 {
+  font-size: small;
+  padding: 10px;
+}
+.title, .url, .remove, .markAsRead {
+  margin: 10px 10px;
+}
+.title {
+  font-weight: bolder;
+}
+.url {
+  font-style: italic;
+}
+.counter {
+  border: 1px solid magenta;
 }

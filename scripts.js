@@ -12,7 +12,7 @@ $('#create').on('click', function() {
     <span class='url'>${$url.val()}</span>
     <button class='remove'>Remove</button>
     <input type='checkbox' class='markAsRead'></input>
-    <label for="checkbox_id">mark as read</label>
+    <label for="checkbox_id"></label>
     <li>
   `);
   clearField()
@@ -22,6 +22,9 @@ $('#create').on('click', function() {
   });
   $('.list').on('click', '.remove', function() {
     $(this).parent().remove();
+  });
+  $('#create').on('click', function(){
+    $('h3').text('Please check to mark as read!');
   });
 });
 
