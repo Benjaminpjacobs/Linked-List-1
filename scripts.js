@@ -30,13 +30,13 @@ function enableBtn() {
     $('#title').val('');
     $('#url').val('');
   }
-  //Uncomment section and remove disable on create button to see error
-  // $('#create').click( function() {
-  //   if ($('#url').val() === '' || $('#title').val() === '') {
-  //     alert("ERROR: Please enter Bookmark Information"); }
-  //   });
+  //remove disable on create button to see error
+  $('#create').click( function() {
+    if ($('#url').val() === '' || $('#title').val() === '') {
+      alert("ERROR: Please enter Bookmark Information"); }
+    });
 
-  
+
   enableBtn()
 
   //to create counter,
