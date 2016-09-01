@@ -4,11 +4,9 @@ var $read = $('.read')
 var $create = $('#create')
 var $data = $('li')
 
-
 $('.list').on('click', function() {
   countAll();
 });
-
 
 $('#create').on('click', function() {
   validateInputs()
@@ -16,8 +14,10 @@ $('#create').on('click', function() {
     <li class="unread">
     <span class='title'>${$title.val()}</span>
     <span class='url'>${$url.val()}</span>
+    <section class="userOptions">
     <button class='remove'>Remove</button>
     <input type='checkbox' class='markAsRead'></input>
+    </section>
     </li>
   `);
   clearField()
@@ -25,13 +25,12 @@ $('#create').on('click', function() {
   countAll();
 });
 
-
 $('.list').on('click', '.markAsRead', function() {
   $(this).parent().toggleClass('read');
   $(this).parent().toggleClass('unread');
 });
   $('.list').on('click', '.remove', function() {
-    $(this).parent().remove();
+    $(this).parent().parent().remove();
   });
   $('#create').on('click', function(){
     $('h3').text('Please check to mark as read!');
@@ -53,7 +52,6 @@ function enableBtn() {
     if ($('#url').val() === '' || $('#title').val() === '') {
       alert("ERROR: Please enter Bookmark Information"); }
   }
-
 
 function countLinks(){
   return $('li').length
