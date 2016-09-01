@@ -23,7 +23,7 @@ $('.list').on('click', '.markAsRead', function() {
 });
 
 $('.list').on('click', '.remove', function() {
-  $(this).parent().remove();
+  $(this).parent().parent().remove();
   countAll();
 });
 
@@ -40,7 +40,6 @@ function addLink() {
    </li>
  `);
 }
-
 
 function enableBtn() {
   if ($('#url').val() === "" || $title.val() === "") {
