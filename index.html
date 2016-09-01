@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
     <title>Linked List</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
   </head>
   <body>
     <section class="container">
@@ -12,17 +14,16 @@
         <input id="url" type="text" placeholder="Bookmark URL" onkeyup="enableBtn()">
         <button id="create">Create Bookmark</button>
       </section>
-      <section>
+      <section class="listContainer">
+        <h3>ENTER YOUR FIRST BOOKMARK!<i class="fa fa-book" aria-hidden="true"></i></h3>
         <ul class="list">
         </ul>
       </section>
-
       <section class="counter">
           <p class="link-counter"></p>
           <p class="read-links"></p>
           <p class="unread-links"></p>
       </section>
-
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
     </script>
