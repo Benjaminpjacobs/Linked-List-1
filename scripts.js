@@ -13,6 +13,7 @@ $create.on('click', function() {
   clearField()
   $create.attr('disabled', 'disabled')
   countAll();
+  $('h3').text('Please check to mark as read!');
 });
 
 $('.list').on('click', '.markAsRead', function() {
@@ -26,6 +27,7 @@ $('.list').on('click', '.remove', function() {
   countAll();
 });
 
+
 enableBtn()
 
 function addLink() {
@@ -38,6 +40,7 @@ function addLink() {
    </li>
  `);
 }
+
 
 function enableBtn() {
   if ($('#url').val() === "" || $title.val() === "") {
