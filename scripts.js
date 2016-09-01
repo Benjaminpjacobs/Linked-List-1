@@ -10,9 +10,9 @@ var clearField = function() {
 $create.on('click', function() {
   validateInputs()
   addLink()
+  countAll();
   clearField()
   $create.attr('disabled', 'disabled')
-  countAll();
   $('h3').text('Please check to mark as read!');
 });
 
@@ -27,9 +27,8 @@ $('.list').on('click', '.remove', function() {
   countAll();
 });
 
-
 enableBtn()
-hr
+
 function addLink() {
     $('ul').append(`
    <li class="unread">
