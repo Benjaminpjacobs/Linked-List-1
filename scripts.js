@@ -29,12 +29,12 @@ $('.list').on('click', '.remove', function() {
 
 
 enableBtn()
-
+hr
 function addLink() {
     $('ul').append(`
    <li class="unread">
    <span class='title'>${$title.val()}</span>
-   <span class='url'>${$url.val()}</span>
+   <a href="${$url.val()}" target="_blank" class='url'>${$url.val()}</a>
    <button class='remove'>Remove</button>
    <input type='checkbox' class='markAsRead'></input>
    </li>
