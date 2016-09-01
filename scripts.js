@@ -23,7 +23,7 @@ $('.list').on('click', '.markAsRead', function() {
 });
 
 $('.list').on('click', '.remove', function() {
-  $(this).parent().parent().remove();
+  $(this).parent().remove();
   countAll();
 });
 
