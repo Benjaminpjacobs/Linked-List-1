@@ -1,6 +1,6 @@
 # A List to Store Pages You Want to Read!
 
-[Try it out!](https://adam-rice.github.io/linked_list/)
+[Try it out.](https://adam-rice.github.io/linked_list/)
 
 Created by [Christine Gamble](https://github.com/ccgamble) and [Adam Rice](https://github.com/adam-rice).
 
